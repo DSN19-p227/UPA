@@ -1,0 +1,20 @@
+18/11/28 01:32:23 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 6913@heming-rdma13
+18/11/28 01:32:23 INFO SignalUtils: Registered signal handler for TERM
+18/11/28 01:32:23 INFO SignalUtils: Registered signal handler for HUP
+18/11/28 01:32:23 INFO SignalUtils: Registered signal handler for INT
+18/11/28 01:32:24 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/11/28 01:32:24 WARN Utils: Your hostname, heming-rdma13 resolves to a loopback address: 127.0.0.1; using 202.45.128.172 instead (on interface eno1)
+18/11/28 01:32:24 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+18/11/28 01:32:24 INFO SecurityManager: Changing view acls to: john
+18/11/28 01:32:24 INFO SecurityManager: Changing modify acls to: john
+18/11/28 01:32:24 INFO SecurityManager: Changing view acls groups to: 
+18/11/28 01:32:24 INFO SecurityManager: Changing modify acls groups to: 
+18/11/28 01:32:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/11/28 01:32:24 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:39254 after 57 ms (0 ms spent in bootstraps)
+18/11/28 01:32:24 INFO SecurityManager: Changing view acls to: john
+18/11/28 01:32:24 INFO SecurityManager: Changing modify acls to: john
+18/11/28 01:32:24 INFO SecurityManager: Changing view acls groups to: 
+18/11/28 01:32:24 INFO SecurityManager: Changing modify acls groups to: 
+18/11/28 01:32:24 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/11/28 01:32:24 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+abled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()

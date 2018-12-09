@@ -1,0 +1,3 @@
+Spark Command: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -cp /home/john/spark-2.2.0/conf/:/home/john/spark-2.2.0/assembly/target/scala-2.11/jars/* -Xmx1g org.apache.spark.deploy.master.Master --host heming-rdma13 --port 7077 --webui-port 8080 -h 10.22.1.13 -p 8700
+========================================
+18/12/04 15:43:48 ERROR Master: RECEIVED SIGNAL TERM

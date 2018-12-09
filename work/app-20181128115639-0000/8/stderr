@@ -1,0 +1,829 @@
+18/11/28 11:57:06 ERROR Executor: Exception in task 57.0 in stage 2.0 (TID 217)
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.util.Arrays.copyOfRange(Arrays.java:3664)
+	at java.lang.String.<init>(String.java:207)
+	at java.lang.StringBuilder.toString(StringBuilder.java:407)
+	at java.io.ObjectInputStream$BlockDataInputStream.readUTFBody(ObjectInputStream.java:3431)
+	at java.io.ObjectInputStream$BlockDataInputStream.readUTF(ObjectInputStream.java:3226)
+	at java.io.ObjectInputStream.readString(ObjectInputStream.java:1905)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1564)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.DeserializationStream.readKey(Serializer.scala:156)
+	at org.apache.spark.serializer.DeserializationStream$$anon$2.getNext(Serializer.scala:188)
+	at org.apache.spark.serializer.DeserializationStream$$anon$2.getNext(Serializer.scala:185)
+	at org.apache.spark.util.NextIterator.hasNext(NextIterator.scala:73)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:438)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+18/11/28 11:57:21 ERROR TransportResponseHandler: Still have 12 requests outstanding when connection from /202.45.128.180:35828 is closed
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911073, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=8066466, length=130898}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportResponseHandler: Still have 25 requests outstanding when connection from /202.45.128.177:36051 is closed
+18/11/28 11:57:21 ERROR Executor: Exception in task 77.0 in stage 2.0 (TID 237)
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at scala.collection.mutable.ResizableArray$class.$init$(ResizableArray.scala:32)
+	at scala.collection.mutable.ArrayBuffer.<init>(ArrayBuffer.scala:49)
+	at scala.collection.mutable.ArrayBuffer.<init>(ArrayBuffer.scala:63)
+	at org.apache.spark.rdd.SubtractedRDD.org$apache$spark$rdd$SubtractedRDD$$getSeq$1(SubtractedRDD.scala:97)
+	at org.apache.spark.rdd.SubtractedRDD$$anonfun$compute$1.apply(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.SubtractedRDD$$anonfun$compute$1.apply(SubtractedRDD.scala:119)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911058, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=6445300, length=130336}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911058, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=6430838, length=131346}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=8046181742540614690, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=13 cap=13]}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=6773936382164494823, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=13 cap=13]}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911060, chunkIndex=0}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/0c/shuffle_0_0_0.data, offset=4135977, length=143151}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911060, chunkIndex=1}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/15/shuffle_0_1_0.data, offset=3845054, length=134024}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911060, chunkIndex=2}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/36/shuffle_0_2_0.data, offset=3781618, length=128893}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911073, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=8086624, length=133543}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911073, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=8119093, length=131358}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911073, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=8154911, length=132826}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911073, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=8134657, length=128316}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911074, chunkIndex=0}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/0c/shuffle_0_0_0.data, offset=7400764, length=141110}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911074, chunkIndex=1}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/15/shuffle_0_1_0.data, offset=6898069, length=133924}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911074, chunkIndex=2}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/36/shuffle_0_2_0.data, offset=6783398, length=129668}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911074, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=6768868, length=128395}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911074, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=6777814, length=129855}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911074, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=6810207, length=130293}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911074, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=6837583, length=132371}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR SparkUncaughtExceptionHandler: Uncaught exception in thread Thread[Executor task launch worker for task 217,5,main]
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.util.Arrays.copyOfRange(Arrays.java:3664)
+	at java.lang.String.<init>(String.java:207)
+	at java.lang.StringBuilder.toString(StringBuilder.java:407)
+	at java.io.ObjectInputStream$BlockDataInputStream.readUTFBody(ObjectInputStream.java:3431)
+	at java.io.ObjectInputStream$BlockDataInputStream.readUTF(ObjectInputStream.java:3226)
+	at java.io.ObjectInputStream.readString(ObjectInputStream.java:1905)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1564)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:431)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:75)
+	at org.apache.spark.serializer.DeserializationStream.readKey(Serializer.scala:156)
+	at org.apache.spark.serializer.DeserializationStream$$anon$2.getNext(Serializer.scala:188)
+	at org.apache.spark.serializer.DeserializationStream$$anon$2.getNext(Serializer.scala:185)
+	at org.apache.spark.util.NextIterator.hasNext(NextIterator.scala:73)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:438)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:37)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911074, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=6822674, length=132034}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911075, chunkIndex=0}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/0c/shuffle_0_0_0.data, offset=10247310, length=143180}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911075, chunkIndex=1}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/15/shuffle_0_1_0.data, offset=9562060, length=134621}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911075, chunkIndex=2}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/36/shuffle_0_2_0.data, offset=9395077, length=128463}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911075, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=9373268, length=130618}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911075, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=9391675, length=130583}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911075, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=9424920, length=131178}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911075, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=9470511, length=133118}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911075, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=9451184, length=132006}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911076, chunkIndex=0}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/0c/shuffle_0_0_0.data, offset=1711003, length=142065}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911076, chunkIndex=1}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/15/shuffle_0_1_0.data, offset=1601321, length=130932}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911076, chunkIndex=2}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/36/shuffle_0_2_0.data, offset=1564693, length=128642}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911076, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=1564287, length=129446}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911076, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=1562302, length=128182}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911076, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=1572354, length=132453}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911076, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=1574336, length=131683}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911076, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=1579420, length=130621}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911077, chunkIndex=0}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/0c/shuffle_0_0_0.data, offset=288189, length=142772}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911077, chunkIndex=1}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/15/shuffle_0_1_0.data, offset=265556, length=134451}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911077, chunkIndex=2}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/36/shuffle_0_2_0.data, offset=260792, length=129085}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911077, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=259904, length=128564}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911077, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=261561, length=132155}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911077, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=264570, length=131685}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911077, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=260263, length=130630}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911077, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=262090, length=130190}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result RpcResponse{requestId=4909129878686157282, body=NioManagedBuffer{buf=java.nio.HeapByteBuffer[pos=0 lim=13 cap=13]}} to /202.45.128.179:40374; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR OneForOneBlockFetcher: Failed while starting block fetches
+java.io.IOException: Connection from /202.45.128.180:35828 closed
+	at org.apache.spark.network.client.TransportResponseHandler.channelInactive(TransportResponseHandler.java:146)
+	at org.apache.spark.network.server.TransportChannelHandler.channelInactive(TransportChannelHandler.java:108)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.handler.timeout.IdleStateHandler.channelInactive(IdleStateHandler.java:278)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at org.apache.spark.network.util.TransportFrameDecoder.channelInactive(TransportFrameDecoder.java:182)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1289)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:893)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:691)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:399)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:446)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR OneForOneBlockFetcher: Failed while starting block fetches
+java.io.IOException: Connection from /202.45.128.180:35828 closed
+	at org.apache.spark.network.client.TransportResponseHandler.channelInactive(TransportResponseHandler.java:146)
+	at org.apache.spark.network.server.TransportChannelHandler.channelInactive(TransportChannelHandler.java:108)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.handler.timeout.IdleStateHandler.channelInactive(IdleStateHandler.java:278)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:75)
+	at org.apache.spark.network.util.TransportFrameDecoder.channelInactive(TransportFrameDecoder.java:182)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:220)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1289)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:241)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:227)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:893)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:691)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:399)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:446)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911037, chunkIndex=2}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/36/shuffle_0_2_0.data, offset=1954775, length=130154}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911060, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=3774534, length=129959}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911037, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=1952900, length=129624}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911060, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=3770414, length=128683}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911037, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=1951901, length=129361}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911037, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=1966431, length=131782}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911037, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=1966604, length=133282}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911037, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=1971413, length=130750}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911038, chunkIndex=0}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/0c/shuffle_0_0_0.data, offset=10675502, length=143348}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911038, chunkIndex=1}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/15/shuffle_0_1_0.data, offset=9963270, length=132885}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911038, chunkIndex=2}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/36/shuffle_0_2_0.data, offset=9783445, length=131066}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911038, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=9766962, length=129855}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911038, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=9782515, length=131175}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911038, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=9820084, length=131655}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911038, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=9869755, length=132040}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911038, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=9844501, length=129526}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911050, chunkIndex=0}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/0c/shuffle_0_0_0.data, offset=4989423, length=142055}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911050, chunkIndex=1}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/15/shuffle_0_1_0.data, offset=4641983, length=131134}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911050, chunkIndex=2}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/36/shuffle_0_2_0.data, offset=4565214, length=130816}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911050, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=4559906, length=131371}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911050, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=4551738, length=130972}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911050, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=4588009, length=126052}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911050, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=4600258, length=129202}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR SparkUncaughtExceptionHandler: [Container in shutdown] Uncaught exception in thread Thread[Executor task launch worker for task 237,5,main]
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at scala.collection.mutable.ResizableArray$class.$init$(ResizableArray.scala:32)
+	at scala.collection.mutable.ArrayBuffer.<init>(ArrayBuffer.scala:49)
+	at scala.collection.mutable.ArrayBuffer.<init>(ArrayBuffer.scala:63)
+	at org.apache.spark.rdd.SubtractedRDD.org$apache$spark$rdd$SubtractedRDD$$getSeq$1(SubtractedRDD.scala:97)
+	at org.apache.spark.rdd.SubtractedRDD$$anonfun$compute$1.apply(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.SubtractedRDD$$anonfun$compute$1.apply(SubtractedRDD.scala:119)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911060, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=3801095, length=131264}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportResponseHandler: Still have 1 requests outstanding when connection from /202.45.128.176:44237 is closed
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911060, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=3809110, length=131218}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911060, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=3813875, length=130625}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911061, chunkIndex=0}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/0c/shuffle_0_0_0.data, offset=9823816, length=142073}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911061, chunkIndex=1}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/15/shuffle_0_1_0.data, offset=9165181, length=130801}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911061, chunkIndex=2}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/36/shuffle_0_2_0.data, offset=9004639, length=128892}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911061, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=8983052, length=131400}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911061, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=8999372, length=130073}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911061, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=9031558, length=131195}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911061, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=9078455, length=130933}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911061, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=9054449, length=132388}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911062, chunkIndex=0}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/0c/shuffle_0_0_0.data, offset=1283030, length=144063}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911062, chunkIndex=1}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/15/shuffle_0_1_0.data, offset=1201998, length=133900}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911062, chunkIndex=2}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/36/shuffle_0_2_0.data, offset=1173313, length=131378}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911062, chunkIndex=3}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/29/shuffle_0_3_0.data, offset=1173130, length=131547}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911062, chunkIndex=4}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/38/shuffle_0_4_0.data, offset=1172521, length=131130}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911062, chunkIndex=5}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/27/shuffle_0_5_0.data, offset=1178131, length=130690}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911062, chunkIndex=6}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/3a/shuffle_0_6_0.data, offset=1182465, length=129297}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911062, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=1183197, length=133113}} to /202.45.128.177:52880; closing connection
+java.nio.channels.ClosedChannelException
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.close(...)(Unknown Source)
+18/11/28 11:57:21 ERROR TransportRequestHandler: Error sending result ChunkFetchSuccess{streamChunkId=StreamChunkId{streamId=705646911050, chunkIndex=7}, buffer=FileSegmentManagedBuffer{file=/tmp/spark-d3acd6f7-0107-4efe-a283-a8c1c4a35861/executor-91989ac2-43fb-4c88-8f21-0a92416b6fb8/blockmgr-3a46575c-cb28-493d-97be-577dc0f6b5f8/1b/shuffle_0_7_0.data, offset=4598477, length=131373}} to /202.45.128.180:55098; closing connection
+java.io.IOException: Broken pipe
+	at sun.nio.ch.FileChannelImpl.transferTo0(Native Method)
+	at sun.nio.ch.FileChannelImpl.transferToDirectlyInternal(FileChannelImpl.java:428)
+	at sun.nio.ch.FileChannelImpl.transferToDirectly(FileChannelImpl.java:493)
+	at sun.nio.ch.FileChannelImpl.transferTo(FileChannelImpl.java:608)
+	at io.netty.channel.DefaultFileRegion.transferTo(DefaultFileRegion.java:139)
+	at org.apache.spark.network.protocol.MessageWithHeader.transferTo(MessageWithHeader.java:121)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWriteFileRegion(NioSocketChannel.java:287)
+	at io.netty.channel.nio.AbstractNioByteChannel.doWrite(AbstractNioByteChannel.java:237)
+	at io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:314)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:802)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.forceFlush(AbstractNioChannel.java:319)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:637)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:566)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:131)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:748)

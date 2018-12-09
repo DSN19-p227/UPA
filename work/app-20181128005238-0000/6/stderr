@@ -1,0 +1,84 @@
+18/11/28 00:52:38 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 19458@heming-rdma13
+18/11/28 00:52:38 INFO SignalUtils: Registered signal handler for TERM
+18/11/28 00:52:38 INFO SignalUtils: Registered signal handler for HUP
+18/11/28 00:52:38 INFO SignalUtils: Registered signal handler for INT
+18/11/28 00:52:39 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/11/28 00:52:39 WARN Utils: Your hostname, heming-rdma13 resolves to a loopback address: 127.0.0.1; using 202.45.128.172 instead (on interface eno1)
+18/11/28 00:52:39 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+18/11/28 00:52:39 INFO SecurityManager: Changing view acls to: john
+18/11/28 00:52:39 INFO SecurityManager: Changing modify acls to: john
+18/11/28 00:52:39 INFO SecurityManager: Changing view acls groups to: 
+18/11/28 00:52:39 INFO SecurityManager: Changing modify acls groups to: 
+18/11/28 00:52:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/11/28 00:52:39 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:44306 after 30 ms (0 ms spent in bootstraps)
+18/11/28 00:52:39 INFO SecurityManager: Changing view acls to: john
+18/11/28 00:52:39 INFO SecurityManager: Changing modify acls to: john
+18/11/28 00:52:39 INFO SecurityManager: Changing view acls groups to: 
+18/11/28 00:52:39 INFO SecurityManager: Changing modify acls groups to: 
+18/11/28 00:52:39 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/11/28 00:52:39 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:44306 after 0 ms (0 ms spent in bootstraps)
+18/11/28 00:52:39 INFO DiskBlockManager: Created local directory at /tmp/spark-c91be9de-b39a-44e4-88d2-6482212ba68e/executor-9227fcc8-58d9-48e7-a99c-101fc169db7e/blockmgr-fad72724-7b93-44c0-8f20-a9ef7067c36f
+18/11/28 00:52:39 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+18/11/28 00:52:39 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@202.45.128.172:44306
+18/11/28 00:52:39 INFO WorkerWatcher: Connecting to worker spark://Worker@202.45.128.172:38394
+18/11/28 00:52:39 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:38394 after 0 ms (0 ms spent in bootstraps)
+18/11/28 00:52:39 INFO WorkerWatcher: Successfully connected to spark://Worker@202.45.128.172:38394
+18/11/28 00:52:39 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+18/11/28 00:52:39 INFO Executor: Starting executor ID 6 on host 202.45.128.172
+18/11/28 00:52:40 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38552.
+18/11/28 00:52:40 INFO NettyBlockTransferService: Server created on 202.45.128.172:38552
+18/11/28 00:52:40 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/11/28 00:52:40 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(6, 202.45.128.172, 38552, None)
+18/11/28 00:52:40 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(6, 202.45.128.172, 38552, None)
+18/11/28 00:52:40 INFO BlockManager: Initialized BlockManager: BlockManagerId(6, 202.45.128.172, 38552, None)
+18/11/28 00:52:44 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+18/11/28 00:52:44 INFO Executor: Running task 0.3 in stage 0.0 (TID 3)
+18/11/28 00:52:44 INFO Executor: Fetching spark://202.45.128.172:44306/jars/spark-examples_2.11-2.2.0.jar with timestamp 1543337558253
+18/11/28 00:52:44 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:44306 after 1 ms (0 ms spent in bootstraps)
+18/11/28 00:52:44 INFO Utils: Fetching spark://202.45.128.172:44306/jars/spark-examples_2.11-2.2.0.jar to /tmp/spark-c91be9de-b39a-44e4-88d2-6482212ba68e/executor-9227fcc8-58d9-48e7-a99c-101fc169db7e/spark-41024f48-92d1-4253-97e1-6d834fea3e69/fetchFileTemp3618511074873601828.tmp
+18/11/28 00:52:44 INFO Utils: Copying /tmp/spark-c91be9de-b39a-44e4-88d2-6482212ba68e/executor-9227fcc8-58d9-48e7-a99c-101fc169db7e/spark-41024f48-92d1-4253-97e1-6d834fea3e69/-9716874681543337558253_cache to /home/john/spark-2.2.0/work/app-20181128005238-0000/6/./spark-examples_2.11-2.2.0.jar
+18/11/28 00:52:44 INFO Executor: Adding file:/home/john/spark-2.2.0/work/app-20181128005238-0000/6/./spark-examples_2.11-2.2.0.jar to class loader
+18/11/28 00:52:44 INFO TorrentBroadcast: Started reading broadcast variable 1
+18/11/28 00:52:44 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:40082 after 1 ms (0 ms spent in bootstraps)
+18/11/28 00:52:44 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.6 KB, free 366.3 MB)
+18/11/28 00:52:44 INFO TorrentBroadcast: Reading broadcast variable 1 took 41 ms
+18/11/28 00:52:44 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 10.6 KB, free 366.3 MB)
+18/11/28 00:52:44 INFO CodeGenerator: Code generated in 89.454173 ms
+18/11/28 00:52:44 INFO CodeGenerator: Code generated in 6.646044 ms
+18/11/28 00:52:44 INFO FileScanRDD: Reading File path: file:///home/john/dataset/kmeans/ds1.10.csv, range: 0-2124683, partition values: [empty row]
+18/11/28 00:52:44 INFO CodeGenerator: Code generated in 5.006897 ms
+18/11/28 00:52:44 INFO TorrentBroadcast: Started reading broadcast variable 0
+18/11/28 00:52:44 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 20.7 KB, free 366.3 MB)
+18/11/28 00:52:44 INFO TorrentBroadcast: Reading broadcast variable 0 took 5 ms
+18/11/28 00:52:44 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 293.2 KB, free 366.0 MB)
+18/11/28 00:52:44 ERROR Executor: Exception in task 0.3 in stage 0.0 (TID 3)
+java.lang.NumberFormatException: For input string: "-4.1929,2.5171,0.47378,-0.62843,-2.6874,0.28546,0.19107,-0.12726,0.63076,-1.6738"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at scala.collection.immutable.StringLike$class.toDouble(StringLike.scala:284)
+	at scala.collection.immutable.StringOps.toDouble(StringOps.scala:29)
+	at org.apache.spark.examples.SparkHdfsLR$.parsePoint(SparkHdfsLR.scala:43)
+	at org.apache.spark.examples.SparkHdfsLR$$anonfun$1.apply(SparkHdfsLR.scala:77)
+	at org.apache.spark.examples.SparkHdfsLR$$anonfun$1.apply(SparkHdfsLR.scala:77)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:409)
+	at scala.collection.Iterator$$anon$11.next(Iterator.scala:409)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1336)
+	at scala.collection.TraversableOnce$class.reduceLeft(TraversableOnce.scala:185)
+	at scala.collection.AbstractIterator.reduceLeft(Iterator.scala:1336)
+	at org.apache.spark.rdd.RDD$$anonfun$reduce$1$$anonfun$15.apply(RDD.scala:1012)
+	at org.apache.spark.rdd.RDD$$anonfun$reduce$1$$anonfun$15.apply(RDD.scala:1010)
+	at org.apache.spark.SparkContext$$anonfun$33.apply(SparkContext.scala:2118)
+	at org.apache.spark.SparkContext$$anonfun$33.apply(SparkContext.scala:2118)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:87)
+	at org.apache.spark.scheduler.Task.run(Task.scala:108)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:335)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+18/11/28 00:52:44 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+18/11/28 00:52:44 INFO MemoryStore: MemoryStore cleared
+18/11/28 00:52:44 INFO BlockManager: BlockManager stopped
+18/11/28 00:52:44 INFO ShutdownHookManager: Shutdown hook called
+18/11/28 00:52:44 INFO ShutdownHookManager: Deleting directory /tmp/spark-c91be9de-b39a-44e4-88d2-6482212ba68e/executor-9227fcc8-58d9-48e7-a99c-101fc169db7e/spark-41024f48-92d1-4253-97e1-6d834fea3e69

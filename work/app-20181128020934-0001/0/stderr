@@ -1,0 +1,5 @@
+18/11/28 02:09:35 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 32318@heming-rdma13
+18/11/28 02:09:35 INFO SignalUtils: Registered signal handler for TERM
+18/11/28 02:09:35 INFO SignalUtils: Registered signal handler for HUP
+18/11/28 02:09:35 INFO SignalUtils: Registered signal handler for INT
+18/11/28 02:09:35 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL 

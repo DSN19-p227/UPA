@@ -1,0 +1,81 @@
+18/11/28 05:03:07 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 23222@heming-rdma13
+18/11/28 05:03:07 INFO SignalUtils: Registered signal handler for TERM
+18/11/28 05:03:07 INFO SignalUtils: Registered signal handler for HUP
+18/11/28 05:03:07 INFO SignalUtils: Registered signal handler for INT
+18/11/28 05:03:07 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/11/28 05:03:07 WARN Utils: Your hostname, heming-rdma13 resolves to a loopback address: 127.0.0.1; using 202.45.128.172 instead (on interface eno1)
+18/11/28 05:03:07 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+18/11/28 05:03:07 INFO SecurityManager: Changing view acls to: john
+18/11/28 05:03:07 INFO SecurityManager: Changing modify acls to: john
+18/11/28 05:03:07 INFO SecurityManager: Changing view acls groups to: 
+18/11/28 05:03:07 INFO SecurityManager: Changing modify acls groups to: 
+18/11/28 05:03:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/11/28 05:03:07 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:35185 after 48 ms (0 ms spent in bootstraps)
+18/11/28 05:03:07 INFO SecurityManager: Changing view acls to: john
+18/11/28 05:03:07 INFO SecurityManager: Changing modify acls to: john
+18/11/28 05:03:07 INFO SecurityManager: Changing view acls groups to: 
+18/11/28 05:03:07 INFO SecurityManager: Changing modify acls groups to: 
+18/11/28 05:03:07 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/11/28 05:03:07 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:35185 after 1 ms (0 ms spent in bootstraps)
+18/11/28 05:03:08 INFO DiskBlockManager: Created local directory at /tmp/spark-a3c21f92-96e5-4ed7-b5a7-07f8c79561e2/executor-a8d4b7be-52d7-4ba8-b54c-f53085daa088/blockmgr-cd43afa7-a2bd-4882-a85b-1332e947d679
+18/11/28 05:03:08 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+18/11/28 05:03:08 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@202.45.128.172:35185
+18/11/28 05:03:08 INFO WorkerWatcher: Connecting to worker spark://Worker@202.45.128.172:42486
+18/11/28 05:03:08 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:42486 after 1 ms (0 ms spent in bootstraps)
+18/11/28 05:03:08 INFO WorkerWatcher: Successfully connected to spark://Worker@202.45.128.172:42486
+18/11/28 05:03:08 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+18/11/28 05:03:08 INFO Executor: Starting executor ID 0 on host 202.45.128.172
+18/11/28 05:03:08 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34559.
+18/11/28 05:03:08 INFO NettyBlockTransferService: Server created on 202.45.128.172:34559
+18/11/28 05:03:08 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/11/28 05:03:08 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(0, 202.45.128.172, 34559, None)
+18/11/28 05:03:08 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(0, 202.45.128.172, 34559, None)
+18/11/28 05:03:08 INFO BlockManager: Initialized BlockManager: BlockManagerId(0, 202.45.128.172, 34559, None)
+18/11/28 05:03:09 INFO CoarseGrainedExecutorBackend: Got assigned task 0
+18/11/28 05:03:09 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+18/11/28 05:03:09 INFO Executor: Fetching spark://202.45.128.172:35185/jars/spark-examples_2.11-2.2.0.jar with timestamp 1543352586685
+18/11/28 05:03:09 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:35185 after 0 ms (0 ms spent in bootstraps)
+18/11/28 05:03:09 INFO Utils: Fetching spark://202.45.128.172:35185/jars/spark-examples_2.11-2.2.0.jar to /tmp/spark-a3c21f92-96e5-4ed7-b5a7-07f8c79561e2/executor-a8d4b7be-52d7-4ba8-b54c-f53085daa088/spark-caf23af7-8e6e-4425-a4ed-f5fcde26cd28/fetchFileTemp8004500115710791098.tmp
+18/11/28 05:03:09 INFO Utils: Copying /tmp/spark-a3c21f92-96e5-4ed7-b5a7-07f8c79561e2/executor-a8d4b7be-52d7-4ba8-b54c-f53085daa088/spark-caf23af7-8e6e-4425-a4ed-f5fcde26cd28/-16387659191543352586685_cache to /home/john/spark-2.2.0/work/app-20181128050306-1847/0/./spark-examples_2.11-2.2.0.jar
+18/11/28 05:03:09 INFO Executor: Adding file:/home/john/spark-2.2.0/work/app-20181128050306-1847/0/./spark-examples_2.11-2.2.0.jar to class loader
+18/11/28 05:03:09 INFO TorrentBroadcast: Started reading broadcast variable 1
+18/11/28 05:03:09 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:44568 after 0 ms (0 ms spent in bootstraps)
+18/11/28 05:03:09 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 5.6 KB, free 366.3 MB)
+18/11/28 05:03:09 INFO TorrentBroadcast: Reading broadcast variable 1 took 49 ms
+18/11/28 05:03:09 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 10.7 KB, free 366.3 MB)
+18/11/28 05:03:10 INFO CodeGenerator: Code generated in 90.479235 ms
+18/11/28 05:03:10 INFO CodeGenerator: Code generated in 6.593193 ms
+18/11/28 05:03:10 INFO FileScanRDD: Reading File path: file:///home/john/dataset/kmeans/ds1.101.csv, range: 0-2178081, partition values: [empty row]
+18/11/28 05:03:10 INFO CodeGenerator: Code generated in 4.898043 ms
+18/11/28 05:03:10 INFO TorrentBroadcast: Started reading broadcast variable 0
+18/11/28 05:03:10 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 20.7 KB, free 366.3 MB)
+18/11/28 05:03:10 INFO TorrentBroadcast: Reading broadcast variable 0 took 6 ms
+18/11/28 05:03:10 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 293.2 KB, free 366.0 MB)
+18/11/28 05:03:10 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 2597 bytes result sent to driver
+18/11/28 05:03:10 INFO CoarseGrainedExecutorBackend: Got assigned task 1
+18/11/28 05:03:10 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+18/11/28 05:03:10 INFO TorrentBroadcast: Started reading broadcast variable 2
+18/11/28 05:03:10 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 5.7 KB, free 366.0 MB)
+18/11/28 05:03:10 INFO TorrentBroadcast: Reading broadcast variable 2 took 7 ms
+18/11/28 05:03:10 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 10.7 KB, free 366.0 MB)
+18/11/28 05:03:10 INFO FileScanRDD: Reading File path: file:///home/john/dataset/kmeans/ds1.101.csv, range: 0-2178081, partition values: [empty row]
+18/11/28 05:03:10 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 2405 bytes result sent to driver
+18/11/28 05:03:10 INFO CoarseGrainedExecutorBackend: Got assigned task 2
+18/11/28 05:03:10 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+18/11/28 05:03:10 INFO TorrentBroadcast: Started reading broadcast variable 3
+18/11/28 05:03:10 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 5.7 KB, free 366.0 MB)
+18/11/28 05:03:10 INFO TorrentBroadcast: Reading broadcast variable 3 took 6 ms
+18/11/28 05:03:10 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 10.7 KB, free 365.9 MB)
+18/11/28 05:03:10 INFO FileScanRDD: Reading File path: file:///home/john/dataset/kmeans/ds1.101.csv, range: 0-2178081, partition values: [empty row]
+18/11/28 05:03:10 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 2448 bytes result sent to driver
+18/11/28 05:03:10 INFO CoarseGrainedExecutorBackend: Got assigned task 3
+18/11/28 05:03:10 INFO Executor: Running task 0.0 in stage 3.0 (TID 3)
+18/11/28 05:03:10 INFO TorrentBroadcast: Started reading broadcast variable 4
+18/11/28 05:03:10 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 5.7 KB, free 365.9 MB)
+18/11/28 05:03:10 INFO TorrentBroadcast: Reading broadcast variable 4 took 5 ms
+18/11/28 05:03:10 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 10.7 KB, free 365.9 MB)
+18/11/28 05:03:10 INFO FileScanRDD: Reading File path: file:///home/john/dataset/kmeans/ds1.101.csv, range: 0-2178081, partition values: [empty row]
+18/11/28 05:03:10 INFO Executor: Finished task 0.0 in stage 3.0 (TID 3). 2405 bytes result sent to driver
+18/11/28 05:03:10 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+18/11/28 05:03:10 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+tdown

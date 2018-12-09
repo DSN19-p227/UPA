@@ -1,0 +1,6 @@
+18/12/02 16:09:48 ERROR MapOutputTracker: Missing an output location for shuffle 0
+18/12/02 16:09:48 ERROR MapOutputTracker: Missing an output location for shuffle 0
+18/12/02 16:09:48 ERROR MapOutputTracker: Missing an output location for shuffle 0
+18/12/02 16:09:48 ERROR MapOutputTracker: Missing an output location for shuffle 0
+18/12/02 16:09:56 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+uffle 0

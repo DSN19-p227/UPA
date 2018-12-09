@@ -1,0 +1,37 @@
+18/11/27 23:03:04 INFO CoarseGrainedExecutorBackend: Started daemon with process name: 25180@heming-rdma13
+18/11/27 23:03:04 INFO SignalUtils: Registered signal handler for TERM
+18/11/27 23:03:04 INFO SignalUtils: Registered signal handler for HUP
+18/11/27 23:03:04 INFO SignalUtils: Registered signal handler for INT
+18/11/27 23:03:04 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/11/27 23:03:04 WARN Utils: Your hostname, heming-rdma13 resolves to a loopback address: 127.0.0.1; using 202.45.128.172 instead (on interface eno1)
+18/11/27 23:03:04 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+18/11/27 23:03:04 INFO SecurityManager: Changing view acls to: john
+18/11/27 23:03:04 INFO SecurityManager: Changing modify acls to: john
+18/11/27 23:03:04 INFO SecurityManager: Changing view acls groups to: 
+18/11/27 23:03:04 INFO SecurityManager: Changing modify acls groups to: 
+18/11/27 23:03:04 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/11/27 23:03:04 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:33448 after 29 ms (0 ms spent in bootstraps)
+18/11/27 23:03:04 INFO SecurityManager: Changing view acls to: john
+18/11/27 23:03:04 INFO SecurityManager: Changing modify acls to: john
+18/11/27 23:03:04 INFO SecurityManager: Changing view acls groups to: 
+18/11/27 23:03:04 INFO SecurityManager: Changing modify acls groups to: 
+18/11/27 23:03:04 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/11/27 23:03:04 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:33448 after 0 ms (0 ms spent in bootstraps)
+18/11/27 23:03:05 INFO DiskBlockManager: Created local directory at /tmp/spark-79bd1173-8f5f-46fc-b5f4-ac44a0fee40b/executor-5ae06d0a-e941-45b0-a459-173fe345f7a8/blockmgr-5a5271a4-051a-4f03-9d06-3caa0146062c
+18/11/27 23:03:05 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+18/11/27 23:03:05 INFO CoarseGrainedExecutorBackend: Connecting to driver: spark://CoarseGrainedScheduler@202.45.128.172:33448
+18/11/27 23:03:05 INFO WorkerWatcher: Connecting to worker spark://Worker@202.45.128.172:46056
+18/11/27 23:03:05 INFO TransportClientFactory: Successfully created connection to /202.45.128.172:46056 after 0 ms (0 ms spent in bootstraps)
+18/11/27 23:03:05 INFO WorkerWatcher: Successfully connected to spark://Worker@202.45.128.172:46056
+18/11/27 23:03:05 INFO CoarseGrainedExecutorBackend: Successfully registered with driver
+18/11/27 23:03:05 INFO Executor: Starting executor ID 6 on host 202.45.128.172
+18/11/27 23:03:05 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35574.
+18/11/27 23:03:05 INFO NettyBlockTransferService: Server created on 202.45.128.172:35574
+18/11/27 23:03:05 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+18/11/27 23:03:05 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(6, 202.45.128.172, 35574, None)
+18/11/27 23:03:05 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(6, 202.45.128.172, 35574, None)
+18/11/27 23:03:05 INFO BlockManager: Initialized BlockManager: BlockManagerId(6, 202.45.128.172, 35574, None)
+18/11/27 23:03:12 INFO CoarseGrainedExecutorBackend: Driver commanded a shutdown
+18/11/27 23:03:12 INFO MemoryStore: MemoryStore cleared
+18/11/27 23:03:12 INFO BlockManager: BlockManager stopped
+18/11/27 23:03:12 ERROR CoarseGrainedExecutorBackend: RECE

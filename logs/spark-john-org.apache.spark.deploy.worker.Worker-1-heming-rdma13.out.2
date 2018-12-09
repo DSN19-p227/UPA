@@ -1,0 +1,36 @@
+Spark Command: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -cp /home/john/spark-2.2.0/conf/:/home/john/spark-2.2.0/assembly/target/scala-2.11/jars/* -Xmx1g org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://10.22.1.13:8700
+========================================
+18/12/03 22:41:43 INFO Worker: Started daemon with process name: 12663@heming-rdma13
+18/12/03 22:41:43 INFO SignalUtils: Registered signal handler for TERM
+18/12/03 22:41:43 INFO SignalUtils: Registered signal handler for HUP
+18/12/03 22:41:43 INFO SignalUtils: Registered signal handler for INT
+18/12/03 22:41:43 WARN Utils: Your hostname, heming-rdma13 resolves to a loopback address: 127.0.0.1; using 202.45.128.172 instead (on interface eno1)
+18/12/03 22:41:43 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+18/12/03 22:41:43 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/12/03 22:41:43 INFO SecurityManager: Changing view acls to: john
+18/12/03 22:41:43 INFO SecurityManager: Changing modify acls to: john
+18/12/03 22:41:43 INFO SecurityManager: Changing view acls groups to: 
+18/12/03 22:41:43 INFO SecurityManager: Changing modify acls groups to: 
+18/12/03 22:41:43 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/12/03 22:41:43 INFO Utils: Successfully started service 'sparkWorker' on port 42031.
+18/12/03 22:41:44 INFO Worker: Starting Spark worker 202.45.128.172:42031 with 8 cores, 61.7 GB RAM
+18/12/03 22:41:44 INFO Worker: Running Spark version 2.2.0
+18/12/03 22:41:44 INFO Worker: Spark home: /home/john/spark-2.2.0
+18/12/03 22:41:44 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+18/12/03 22:41:44 INFO WorkerWebUI: Bound WorkerWebUI to 0.0.0.0, and started at http://202.45.128.172:8081
+18/12/03 22:41:44 INFO Worker: Connecting to master 10.22.1.13:8700...
+18/12/03 22:41:44 INFO TransportClientFactory: Successfully created connection to /10.22.1.13:8700 after 18 ms (0 ms spent in bootstraps)
+18/12/03 22:41:44 INFO Worker: Successfully registered with master spark://10.22.1.13:8700
+18/12/03 22:41:47 INFO Worker: Asked to launch executor app-20181203224147-0000/0 for TpchQuery1
+18/12/03 22:41:47 INFO SecurityManager: Changing view acls to: john
+18/12/03 22:41:47 INFO SecurityManager: Changing modify acls to: john
+18/12/03 22:41:47 INFO SecurityManager: Changing view acls groups to: 
+18/12/03 22:41:47 INFO SecurityManager: Changing modify acls groups to: 
+18/12/03 22:41:47 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/12/03 22:41:47 INFO ExecutorRunner: Launch command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/home/john/spark-2.2.0/conf/:/home/john/spark-2.2.0/assembly/target/scala-2.11/jars/*" "-Xmx1024M" "-Dspark.driver.port=34187" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@202.45.128.172:34187" "--executor-id" "0" "--hostname" "202.45.128.172" "--cores" "8" "--app-id" "app-20181203224147-0000" "--worker-url" "spark://Worker@202.45.128.172:42031"
+18/12/03 22:41:50 INFO Worker: Asked to kill executor app-20181203224147-0000/0
+18/12/03 22:41:50 INFO ExecutorRunner: Runner thread for executor app-20181203224147-0000/0 interrupted
+18/12/03 22:41:50 INFO ExecutorRunner: Killing process!
+18/12/03 22:41:50 INFO Worker: Executor app-20181203224147-0000/0 finished with state KILLED exitStatus 0
+18/12/03 22:41:50 INFO ExternalShuffleBlockResolver: Application app-20181203224147-0000 removed, cleanupLocalDirs = true
+18/12/03 22:41:50 INFO Worker: Cleaning up local directories for application app-20181203224147-0000

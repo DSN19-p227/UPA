@@ -1,0 +1,31 @@
+Spark Command: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -cp /home/john/spark-2.2.0/conf/:/home/john/spark-2.2.0/assembly/target/scala-2.11/jars/* -Xmx1g org.apache.spark.deploy.master.Master --host heming-rdma13 --port 7077 --webui-port 8080 -h 10.22.1.13 -p 8700
+========================================
+18/12/03 22:41:40 INFO Master: Started daemon with process name: 12534@heming-rdma13
+18/12/03 22:41:40 INFO SignalUtils: Registered signal handler for TERM
+18/12/03 22:41:40 INFO SignalUtils: Registered signal handler for HUP
+18/12/03 22:41:40 INFO SignalUtils: Registered signal handler for INT
+18/12/03 22:41:40 WARN Utils: Your hostname, heming-rdma13 resolves to a loopback address: 127.0.0.1; using 202.45.128.172 instead (on interface eno1)
+18/12/03 22:41:40 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+18/12/03 22:41:41 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/12/03 22:41:41 INFO SecurityManager: Changing view acls to: john
+18/12/03 22:41:41 INFO SecurityManager: Changing modify acls to: john
+18/12/03 22:41:41 INFO SecurityManager: Changing view acls groups to: 
+18/12/03 22:41:41 INFO SecurityManager: Changing modify acls groups to: 
+18/12/03 22:41:41 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(john); groups with view permissions: Set(); users  with modify permissions: Set(john); groups with modify permissions: Set()
+18/12/03 22:41:41 INFO Utils: Successfully started service 'sparkMaster' on port 8700.
+18/12/03 22:41:41 INFO Master: Starting Spark master at spark://10.22.1.13:8700
+18/12/03 22:41:41 INFO Master: Running Spark version 2.2.0
+18/12/03 22:41:41 INFO Utils: Successfully started service 'MasterUI' on port 8080.
+18/12/03 22:41:41 INFO MasterWebUI: Bound MasterWebUI to 0.0.0.0, and started at http://202.45.128.172:8080
+18/12/03 22:41:41 INFO Utils: Successfully started service on port 6066.
+18/12/03 22:41:41 INFO StandaloneRestServer: Started REST server for submitting applications on port 6066
+18/12/03 22:41:41 INFO Master: I have been elected leader! New state: ALIVE
+18/12/03 22:41:44 INFO Master: Registering worker 202.45.128.172:42031 with 8 cores, 61.7 GB RAM
+18/12/03 22:41:47 INFO Master: Registering app TpchQuery1
+18/12/03 22:41:47 INFO Master: Registered app TpchQuery1 with ID app-20181203224147-0000
+18/12/03 22:41:47 INFO Master: Launching executor app-20181203224147-0000/0 on worker worker-20181203224143-202.45.128.172-42031
+18/12/03 22:41:50 INFO Master: Received unregister request from application app-20181203224147-0000
+18/12/03 22:41:50 INFO Master: Removing app app-20181203224147-0000
+18/12/03 22:41:50 INFO Master: 10.22.1.13:33730 got disassociated, removing it.
+18/12/03 22:41:50 INFO Master: 202.45.128.172:34187 got disassociated, removing it.
+18/12/03 22:41:50 WARN Master: Got status update for unknown executor app-20181203224147-0000/0

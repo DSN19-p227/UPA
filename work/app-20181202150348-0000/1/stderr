@@ -1,0 +1,3 @@
+18/12/02 15:04:33 ERROR MapOutputTracker: Missing an output location for shuffle 4
+18/12/02 15:04:42 ERROR CoarseGrainedExecutorBackend: RECEIVED SIGNAL TERM
+uffle 4
